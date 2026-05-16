@@ -25,7 +25,7 @@ fetch('[https://api.com/produtos](https://api.com/produtos)') ---- esse link é 
 ```
 
 #### Backend (Python)
-```
+```Python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -43,7 +43,7 @@ Utilizado para enviar novos dados do frontend para serem salvos ou processados n
 
 ### Frontend (JavaScript)
 
-```
+```javascript
 const novoProduto = { nome: "Monitor", preco: 1200.00 };
 
 fetch('[https://api.com/produtos](https://api.com/produtos)', {
@@ -59,7 +59,7 @@ fetch('[https://api.com/produtos](https://api.com/produtos)', {
 
 ### Backend (Python)
 
-````
+```Python
 from pydantic import BaseModel
 
 # Define a estrutura de dados esperada pelo backend
@@ -80,6 +80,7 @@ Utilizado para modificar um registro já existente. O identificador do item (ID)
 
 ### Frontend (JavaScript)
 
+```javascript
 const dadosAtualizados = { nome: "Notebook Pro", preco: 4500.00 };
 const idDoProduto = 42;
 
@@ -92,9 +93,11 @@ fetch(`https://api.com/produtos/${idDoProduto}`, {
 })
 .then(response => response.json())
 .then(dados => console.log("Item atualizado:", dados));
+```
 
 ### Backend (Python)
 
+```Python
 @app.put("/produtos/{produto_id}")
 def atualizar_produto(produto_id: int, produto: Produto):
     # produto_id é capturado da URL; produto é capturado do corpo do JSON
@@ -102,13 +105,14 @@ def atualizar_produto(produto_id: int, produto: Produto):
         "mensagem": f"Produto ID {produto_id} foi modificado.",
         "dados_novos": produto
     }
-
+```
 # 4.DELETE (Remoção de dados)
 
 Utilizado para excluir um registro do sistema. Assim como o GET, normalmente não envia dados no corpo, apenas o ID do alvo na URL.
 
 ### Frontend (JavaScript)
 
+```javascript
 const idParaDeletar = 42;
 
 fetch(`https://api.com/produtos/${idParaDeletar}`, {
@@ -116,14 +120,16 @@ fetch(`https://api.com/produtos/${idParaDeletar}`, {
 })
 .then(response => response.json())
 .then(dados => console.log("Status da exclusão:", dados));
+```
 
 ### Backend (Python)
 
+```Python
 @app.delete("/produtos/{produto_id}")
 def deletar_produto(produto_id: int):
     # Executa a lógica de remoção no banco de dados usando o ID recebido
     return {"status": "sucesso", "mensagem": f"Produto ID {produto_id} removido."}
-
+```
 ###### Erros de validação comum
 
 Erro 404 (Not Found): Ocorre quando a URL chamada no JavaScript não existe no backend ou o método HTTP está incorreto para aquela rota.
