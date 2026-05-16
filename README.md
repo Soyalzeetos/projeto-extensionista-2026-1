@@ -132,8 +132,9 @@ def deletar_produto(produto_id: int):
 ```
 ### Erros de validação comum
 
+```markdown
 Erro 404 (Not Found): Ocorre quando a URL chamada no JavaScript não existe no backend ou o método HTTP está incorreto para aquela rota.
 
 Erro 422 (Unprocessable Entity): Erro gerado automaticamente pelo FastAPI quando o JSON enviado pelo JavaScript não possui as chaves ou os tipos de dados esperados pelo modelo do Python (ex: enviar preco como string em vez de número).
 
-Alinhamento de Chaves: Os nomes das propriedades enviadas no objeto JavaScript precisam corresponder exatamente aos atributos definidos na classe do FastAPI.
+Alinhamento de Chaves: Os nomes das propriedades enviadas no objeto JavaScript precisam corresponder exatamente aos atributos definidos na classe do FastAPI.```
