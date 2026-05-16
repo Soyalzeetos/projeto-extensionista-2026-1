@@ -1,4 +1,4 @@
-# projeto-extensionista-2026-1
+# Projeto Extensionista 2026 - Banco de Dados
 Um projeto extensionista para a UEMG no primeiro semestre de 2026
 
 
