@@ -1,0 +1,21 @@
+# --- Ambientes Virtuais e Dependências ---
+venv/
+.venv/
+env/
+node_modules/
+
+# --- Arquivos de Configuração Sensíveis (Senhas, Chaves de API) ---
+.env
+*.env.local
+
+# --- Arquivos gerados pelo Sistema Operacional ---
+.DS_Store
+Thumbs.db
+
+# --- Pastas de IDEs e Editores ---
+.vscode/
+.idea/
+
+# --- Arquivos compilados ou caches ---
+__pycache__/
+*.pyc
