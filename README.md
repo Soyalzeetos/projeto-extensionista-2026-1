@@ -130,7 +130,7 @@ def deletar_produto(produto_id: int):
     # Executa a lógica de remoção no banco de dados usando o ID recebido
     return {"status": "sucesso", "mensagem": f"Produto ID {produto_id} removido."}
 ```
-###### Erros de validação comum
+### Erros de validação comum
 
 Erro 404 (Not Found): Ocorre quando a URL chamada no JavaScript não existe no backend ou o método HTTP está incorreto para aquela rota.
 
