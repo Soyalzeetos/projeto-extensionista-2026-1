@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS ProjetoExtensionista
+
+CREATE TABLE IF NOT EXISTS Produto(
+    id_produto INT PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(50),
+    descricao VARCHAR(255),
+    marca VARCHAR(50)
+)
